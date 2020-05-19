@@ -16,8 +16,9 @@ namespace lambda1_csharp
             list.Add(new Product("Tablet", 450.00));
             list.Add(new Product("Celular", 1050.00));
 
-            Comparison<Product> comp = CompareProducts;
-
+            
+            Comparison<Product> comp = (p1, p2) => p1.Name.ToUpper().
+                                                    CompareTo(p2.Name.ToUpper()); //Expressão lambda
             list.Sort(comp); // isso é um delegate com base numa sobrecarga do metodo sort
 
             foreach (Product p in list)
