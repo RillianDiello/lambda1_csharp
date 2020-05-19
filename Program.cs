@@ -15,7 +15,7 @@ namespace lambda1_csharp
             list.Add(new Product("Notebook", 1200.00));
             list.Add(new Product("Tablet", 450.00));
 
-            list.Sort(CompareProducts);
+            list.Sort(CompareProducts); // isso é um delegate com base numa sobrecarga do metodo sort
 
             foreach (Product p in list)
             {
